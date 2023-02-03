@@ -1,0 +1,846 @@
+{
+	"info": {
+		"_postman_id": "531f8f81-1df8-4a3e-b315-90f8b2cd6660",
+		"name": "workout",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "fadi1234",
+									"type": "text"
+								},
+								{
+									"key": "Email",
+									"value": "fadi1234@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "guest",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/register"
+					},
+					"response": []
+				},
+				{
+					"name": "log_in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "admin",
+									"type": "default"
+								},
+								{
+									"key": "Email",
+									"value": "admin@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "admin1234",
+									"type": "default"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/login"
+					},
+					"response": []
+				},
+				{
+					"name": "log_out",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/logout"
+					},
+					"response": []
+				},
+				{
+					"name": "Update identity",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/update_identity/"
+					},
+					"response": []
+				},
+				{
+					"name": "all_users",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "all_admins",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "6|kYCtH8dlQ69iZmWsj11PyoZjWOsIVecznBybJ8fa"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/all_admins"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "add exe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "2|U5rYnXnW6znAfwvJckl7e5A12rVuq2QXpAWlFbt9"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "bench press 2",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "this is good exe1",
+									"type": "default"
+								},
+								{
+									"key": "img",
+									"value": "C:\\Users\\ITC\\Pictures\\Screenshots.png",
+									"type": "default"
+								},
+								{
+									"key": "set",
+									"value": "31",
+									"type": "default"
+								},
+								{
+									"key": "rep",
+									"value": "151",
+									"type": "default"
+								},
+								{
+									"key": "muscle",
+									"value": "chest",
+									"type": "default"
+								},
+								{
+									"key": "purpose",
+									"value": "fadi1",
+									"type": "default"
+								},
+								{
+									"key": "rest_time",
+									"value": "51",
+									"type": "default"
+								},
+								{
+									"key": "exe_time",
+									"value": "51",
+									"type": "default"
+								},
+								{
+									"key": "level",
+									"value": "2",
+									"type": "default"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/exercise/add_exe"
+					},
+					"response": []
+				},
+				{
+					"name": "relate exe_ill",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "1|gzVL8uB9M1IDtEqbzdQMGYO39PLQAFfGeYOzyieN"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "fadi",
+									"type": "default"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/relate_exe_ill/1"
+					},
+					"response": []
+				},
+				{
+					"name": "add injury",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "1|gzVL8uB9M1IDtEqbzdQMGYO39PLQAFfGeYOzyieN"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "shoulder1",
+									"type": "default"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/injury/add_injury"
+					},
+					"response": []
+				},
+				{
+					"name": "destroy_exe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "6|kYCtH8dlQ69iZmWsj11PyoZjWOsIVecznBybJ8fa"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/exercise/destroy_exe"
+					},
+					"response": []
+				},
+				{
+					"name": "update_exe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "6|kYCtH8dlQ69iZmWsj11PyoZjWOsIVecznBybJ8fa"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "description",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "img",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "set",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "rep",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "purpose",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "rest_time",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "exe_time",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "level",
+									"value": "",
+									"type": "default"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/exercise/update_exe"
+					},
+					"response": []
+				},
+				{
+					"name": "relate_exe_ill",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "6|kYCtH8dlQ69iZmWsj11PyoZjWOsIVecznBybJ8fa"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/update_exe/relate_exe_ill"
+					},
+					"response": []
+				},
+				{
+					"name": "update_injury",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "6|kYCtH8dlQ69iZmWsj11PyoZjWOsIVecznBybJ8fa"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "default"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/injury/update_injury"
+					},
+					"response": []
+				},
+				{
+					"name": "destroy_injury",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/injury/injury/destroy_injury"
+					},
+					"response": []
+				},
+				{
+					"name": "create_diet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "6|kYCtH8dlQ69iZmWsj11PyoZjWOsIVecznBybJ8fa"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "text",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "image",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "type",
+									"value": "",
+									"type": "default"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/diet/create_diet"
+					},
+					"response": []
+				},
+				{
+					"name": "destroy_diet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "6|kYCtH8dlQ69iZmWsj11PyoZjWOsIVecznBybJ8fa"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/diet/destroy_diet"
+					},
+					"response": []
+				},
+				{
+					"name": "add_song",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "6|kYCtH8dlQ69iZmWsj11PyoZjWOsIVecznBybJ8fa"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "song",
+									"value": "",
+									"type": "default"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/music/add_song"
+					},
+					"response": []
+				},
+				{
+					"name": "delete_song",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/music/delete_song"
+					},
+					"response": []
+				},
+				{
+					"name": "update_song",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "6|kYCtH8dlQ69iZmWsj11PyoZjWOsIVecznBybJ8fa"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "key",
+									"value": "",
+									"type": "default"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/music/update_song"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Music",
+			"item": [
+				{
+					"name": "all_music",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "show_music",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/show_music/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "makeAdmin",
+			"item": [
+				{
+					"name": "make_admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "6|kYCtH8dlQ69iZmWsj11PyoZjWOsIVecznBybJ8fa"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/make_admin"
+					},
+					"response": []
+				},
+				{
+					"name": "make_new_admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "6|kYCtH8dlQ69iZmWsj11PyoZjWOsIVecznBybJ8fa"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/make_new_admin"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TRAINEE",
+			"item": [
+				{
+					"name": "create_trainee",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "2|yTB0mW9fjL4XAT0aYdkXIRuz1NTXiiyngodqIypl"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "default"
+								},
+								{
+									"key": "height",
+									"value": "184",
+									"type": "default"
+								},
+								{
+									"key": "weight",
+									"value": "83",
+									"type": "default"
+								},
+								{
+									"key": "level",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "purpose",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "date",
+									"value": "11_8_2022",
+									"type": "default"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/create_trainee"
+					},
+					"response": []
+				},
+				{
+					"name": "update_Trainee",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "6|kYCtH8dlQ69iZmWsj11PyoZjWOsIVecznBybJ8fa"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "gender",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "height",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "weight",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "level",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "purpose",
+									"value": "",
+									"type": "default"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/update_Trainee"
+					},
+					"response": []
+				},
+				{
+					"name": "choose_injury",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "6|kYCtH8dlQ69iZmWsj11PyoZjWOsIVecznBybJ8fa"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/choose_injury/"
+					},
+					"response": []
+				},
+				{
+					"name": "suggesting_exe",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/suggesting_exe/"
+					},
+					"response": []
+				},
+				{
+					"name": "change_exe",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "INJURY",
+			"item": [
+				{
+					"name": "all_injuries",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "6|kYCtH8dlQ69iZmWsj11PyoZjWOsIVecznBybJ8fa"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/all_injuries"
+					},
+					"response": []
+				},
+				{
+					"name": "show_injury",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "6|kYCtH8dlQ69iZmWsj11PyoZjWOsIVecznBybJ8fa"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/show_injury/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DIET",
+			"item": [
+				{
+					"name": "all_diets",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "6|kYCtH8dlQ69iZmWsj11PyoZjWOsIVecznBybJ8fa"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/all_diets"
+					},
+					"response": []
+				},
+				{
+					"name": "show_diet",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/show_diet/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Image",
+			"item": [
+				{
+					"name": "Upload",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Download",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exercise",
+			"item": [
+				{
+					"name": "all_exe",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "show_exe",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
